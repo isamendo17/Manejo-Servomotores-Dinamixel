@@ -1,1 +1,1 @@
-# Manejo-Servomotores-Dinamixel
+# Manejo Servomotores Dinamixel
