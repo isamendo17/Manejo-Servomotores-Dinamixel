@@ -2,7 +2,7 @@
 
 #define DXL_SERIAL Serial1
 const uint8_t DXL_ID = 1;
-const uint32_t DXL_BAUDRATE = 57600
+const uint32_t DXL_BAUDRATE = 57600;
 
 Dynamixel2Arduino dxl(DXL_SERIAL);
 
@@ -15,17 +15,23 @@ void setup() {
   dxl.setBaudrate(DXL_ID, DXL_BAUDRATE);
   Serial.println("Listo para lectura de posición");
 
-  dxl.torqueOn(DXL_ID);
+  dxl.torqueOff(DXL_ID);
 }
 
 void loop() {
   if (Serial.available()) {
-    char cmd = Serial.read();
+    String input = Serial.readStringUntil('\n');
 
-    if (cmd == 'P') {
-      uint16_t pos = dxl.getPresentPosition(DXL_ID);
-      float angle_deg = (pos / 1023.0) * 180.0;
-
-      Serial.print("POS_GRADOS:");
-      Serial.println(angle_deg, 2);  // Enviar con 2 decimales
+    if (input == "leer") {
+      unsigned long t0 = millis();
+      while (millis() - t0 < 5000) {
+        float pos = dxl.getPresentPosition(DXL_ID);  // Lee posición en ticks
+        float grados = map(pos, 0, 4095, 0, 180);     // Convierte a grados
+        Serial.print("POS_GRADOS:");
+        Serial.println(grados);
+        delay(100);  // Envía cada 100 ms
+      }
     }
+  }
+}
+
