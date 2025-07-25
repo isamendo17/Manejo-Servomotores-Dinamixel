@@ -13,7 +13,7 @@ void setup() {
   dxl.begin();
   dxl.setPortProtocolVersion(2.0);
   dxl.setBaudrate(DXL_ID, DXL_BAUDRATE);
-  Serial.println("Listo para lectura de posición");
+    Serial.println("Listo para lectura de posición y velocidad");
 
   dxl.torqueOff(DXL_ID);
 }
@@ -27,8 +27,12 @@ void loop() {
       while (millis() - t0 < 5000) {
         float pos = dxl.getPresentPosition(DXL_ID);  // Lee posición en ticks
         float grados = map(pos, 0, 4095, 0, 180);     // Convierte a grados
+
+        float velocidad = dxl.getPresentVelocity(DXL_ID);  // En ticks/seg
         Serial.print("POS_GRADOS:");
-        Serial.println(grados);
+        Serial.print(grados);
+        Serial.print(",VEL:");
+        Serial.println(velocidad);
         delay(100);  // Envía cada 100 ms
       }
     }

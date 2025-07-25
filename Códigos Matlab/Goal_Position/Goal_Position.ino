@@ -25,7 +25,6 @@ void setup() {
 
   dxl.torqueOn(DXL_ID);
 
-  Serial.println("Esperando START desde MATLAB...");
 }
 
 void loop() {
