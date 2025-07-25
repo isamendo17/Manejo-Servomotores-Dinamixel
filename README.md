@@ -13,5 +13,4 @@
 
 <div align="justify"> 
 
-## Descripción del Repositorio
-A continuación, se tiene en la siguiente guía 
+En el presente repositorio se tiene la guía de trabajo, la cual contiene la instalación, recomendaciones y manejo de los servomotores MX-64T y XL330-M288-T. Adicionalmente, se tienen las carpetas para controlar estos servomotores por medio de Arduino y MATLAB.
