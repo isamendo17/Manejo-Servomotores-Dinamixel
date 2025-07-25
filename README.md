@@ -9,5 +9,9 @@
 
 <h3>Curso de Servomecanismos</h3>
 
+</div>
+
+<div align="justify"> 
+
 ## Descripción del Repositorio
 A continuación, se tiene en la siguiente guía 
