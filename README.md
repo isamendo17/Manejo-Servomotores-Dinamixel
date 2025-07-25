@@ -7,4 +7,7 @@
 
 # Manejo Servomotores Dinamixel
 
-<h3>Curso de Robótica 2025-I</h3>
+<h3>Curso de Servomecanismos</h3>
+
+## Descripción del Repositorio
+A continuación, se tiene en la siguiente guía 
