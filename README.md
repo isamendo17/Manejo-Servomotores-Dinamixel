@@ -17,6 +17,8 @@ En el presente repositorio se tiene la guía de trabajo, la cual contiene la ins
 
 ## Video uso servomotores
 <div align="center">
+    <picture>
 [![Alt text](https://img.youtube.com/vi/zZtO-U8U9Ag/0.jpg)](https://www.youtube.com/watch?v=zZtO-U8U9Ag)
-</div>
+    </picture>
+    </div>
 <div align="justify">
